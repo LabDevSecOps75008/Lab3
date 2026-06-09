@@ -1,0 +1,13 @@
+name: "DAST — ZAP Baseline"
+
+on: [push, pull_request]
+
+jobs:
+  zap:
+    name: "ZAP Baseline Scan"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # À compléter :
+      # 1. Démarrer l'application (en entreprise, l'app tourne déjà sur staging — cette étape disparaît)
+      # 2. Lancer le scan ZAP baseline
